@@ -84,11 +84,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>=======<br>checkID_Card = function(obj)<br>{<br>    var card =obj.toUpperCase();</p>
+<pre><code>//是否为空
+if(card === &apos;&apos;)
+{
+    //alert(&apos;请输入身份证号，身份证号不能为空&apos;);
+    // obj.focus;
+    return false;
+}
+//必须18位
+//是否为空
+if(card.length != 18)
+{
+    return false;
+}
+//校验长度，类型
+if(isCardNo(card) === false)
+{
+    //alert(&apos;您输入的身份证号码不正确，请重新输入&apos;);
+    //  obj.focus;
+    return false;
+}
+
+//检查省份
+if(checkProvince(card) === false)
+{
+    //alert(&apos;您输入的身份证号码不正确,请重新输入&apos;);
+    // obj.focus;
+    return false;
+}
+//校验生日
+if(checkBirthday(card) === false)
+{
+    //alert(&apos;您输入的身份证号码生日不正确,请重新输入&apos;);
+    // obj.focus();
+    return false;
+}
+//检验位的检测
+if(checkParity(card) === false)
+{
+    //alert(&apos;您的身份证校验位不正确,请重新输入&apos;);
+    //  obj.focus();
+    return false;
+}
+
+return true;
+</code></pre><p>};</p>
+<p>=======</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/16/身份证验证/" data-id="cjh8tabzz0002fsulnt7a7h29" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/16/身份证验证/" data-id="cjh8tejie00044wuly4suxlp6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -124,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/15/springboot日志搭建/" data-id="cjh8tabyl0000fsulxpg6pn2d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/15/springboot日志搭建/" data-id="cjh8teji600014wul06421970" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/14/testArticle/" data-id="cjh8tabzx0001fsulx40ckyfj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/14/testArticle/" data-id="cjh8tejic00034wulek1hxa49" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/hello-world/" data-id="cjh8tac000003fsul19pghzpm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/11/hello-world/" data-id="cjh8tejib00024wul3nba9t4h" class="article-share-link">Share</a>
       
       
     </footer>

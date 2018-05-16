@@ -7,14 +7,17 @@
   
   <title>身份证验证 | 坤大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="=======checkID_Card = function(obj){    var card =obj.toUpperCase(); //是否为空 if(card === &amp;apos;&amp;apos;) {     //alert(&amp;apos;请输入身份证号，身份证号不能为空&amp;apos;);     // obj.focus;     return false; } //必须18位 //是否为空">
+<meta property="og:type" content="article">
 <meta property="og:title" content="身份证验证">
 <meta property="og:url" content="http://yoursite.com/2018/05/16/身份证验证/index.html">
 <meta property="og:site_name" content="坤大大的博客">
+<meta property="og:description" content="=======checkID_Card = function(obj){    var card =obj.toUpperCase(); //是否为空 if(card === &amp;apos;&amp;apos;) {     //alert(&amp;apos;请输入身份证号，身份证号不能为空&amp;apos;);     // obj.focus;     return false; } //必须18位 //是否为空">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-16T07:55:22.946Z">
+<meta property="og:updated_time" content="2018-05-16T07:58:44.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="身份证验证">
+<meta name="twitter:description" content="=======checkID_Card = function(obj){    var card =obj.toUpperCase(); //是否为空 if(card === &amp;apos;&amp;apos;) {     //alert(&amp;apos;请输入身份证号，身份证号不能为空&amp;apos;);     // obj.focus;     return false; } //必须18位 //是否为空">
   
     <link rel="alternate" href="/atom.xml" title="坤大大的博客" type="application/atom+xml">
   
@@ -83,11 +86,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>=======<br>checkID_Card = function(obj)<br>{<br>    var card =obj.toUpperCase();</p>
+<pre><code>//是否为空
+if(card === &apos;&apos;)
+{
+    //alert(&apos;请输入身份证号，身份证号不能为空&apos;);
+    // obj.focus;
+    return false;
+}
+//必须18位
+//是否为空
+if(card.length != 18)
+{
+    return false;
+}
+//校验长度，类型
+if(isCardNo(card) === false)
+{
+    //alert(&apos;您输入的身份证号码不正确，请重新输入&apos;);
+    //  obj.focus;
+    return false;
+}
+
+//检查省份
+if(checkProvince(card) === false)
+{
+    //alert(&apos;您输入的身份证号码不正确,请重新输入&apos;);
+    // obj.focus;
+    return false;
+}
+//校验生日
+if(checkBirthday(card) === false)
+{
+    //alert(&apos;您输入的身份证号码生日不正确,请重新输入&apos;);
+    // obj.focus();
+    return false;
+}
+//检验位的检测
+if(checkParity(card) === false)
+{
+    //alert(&apos;您的身份证校验位不正确,请重新输入&apos;);
+    //  obj.focus();
+    return false;
+}
+
+return true;
+</code></pre><p>};</p>
+<p>=======</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/16/身份证验证/" data-id="cjh8tabzz0002fsulnt7a7h29" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/16/身份证验证/" data-id="cjh8tejie00044wuly4suxlp6" class="article-share-link">Share</a>
       
       
     </footer>
